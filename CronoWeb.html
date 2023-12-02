@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de Control Administrativo</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      height: 100vh; /* Ajustar la altura del cuerpo al 100% de la ventana */
+    }
+
+    .container {
+      display: flex;
+      height: 100%; /* Ajustar la altura al 100% de la ventana */
+    }
+
+    /* Estilos de la barra lateral */
+    .sidebar {
+      width: 250px;
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 10px 15px;
+      border-radius: 5px;
+      background-color: #333; /* Cambiar color de fondo */
+    }
+
+    .sidebar ul li a:hover {
+      background-color: #555; /* Cambiar color de fondo al pasar el ratón */
+    }
+
+    /* Estilos del área principal */
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; /* Distribución horizontal */
+      align-content: space-between; /* Distribución vertical */
+      padding: 20px;
+      height: 100%; /* Ajustar la altura al 100% de la ventana */
+      box-sizing: border-box; /* Considerar el padding y el borde dentro del tamaño total */
+    }
+
+    .stats-box {
+      width: calc(33.33% - 20px); /* Tres elementos por fila */
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 10px; /* Reducir el margen inferior */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .stats-box h3 {
+      margin-top: 0;
+    }
+
+    .stats-box p {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 10px 0 0;
+    }
+
+    /* Estilo para la distribución de 3 columnas por 2 filas */
+    @media (max-width: 768px) {
+      .stats-box {
+        width: calc(50% - 20px); /* Dos elementos por fila */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>PANEL DE CONTROL</h2>
+      <ul>
+        <li><a href="#">TAREAS</a></li>
+        <li><a href="#">EVALUACIÓN</a></li>
+        <li><a href="#">DEPARTAMENTOS</a></li>
+        <li><a href="#">EVALUADORES</a></li>
+        <li><a href="#">ADMINISTRADORES</a></li>
+      </ul>
+    </aside>
+    <main class="main-content">
+      <div class="stats-box total-dependencias">
+        <h3>Total de Dependencias</h3>
+        <p>100</p>
+      </div>
+      <div class="stats-box avance-tareas">
+        <h3>Avance de Tareas</h3>
+        <p>80%</p>
+      </div>
+      <div class="stats-box num-administradores">
+        <h3>Número de Administradores</h3>
+        <p>5</p>
+      </div>
+      <div class="stats-box num-usuarios">
+        <h3>Usuarios</h3>
+        <p>50</p>
+      </div>
+      <div class="stats-box num-evaluadores">
+        <h3>Evaluadores</h3>
+        <p>15</p>
+      </div>
+      <div class="stats-box total-tareas">
+        <h3>Total de Tareas</h3>
+        <p>200</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+
+
+
+
+
